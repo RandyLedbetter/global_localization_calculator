@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Global Localization Calculator</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="css/bootstrap-editable.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#">Global Localization Calculator</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+        <div class="wrapper">
+            <div class="proper-content">       
+            
+            <div id="content"></div>
+
+            <div id="starting-view" class="row">
+
+                <div class="span8">
+                    <h2 class="text-info">CSCI 580  Introduction to Artificial Intelligence - Project I</h2>
+                    <h4>By: Randy M. Ledbetter</h4>
+                    <hr />
+                    <img src="img/AI-Grid-Black.png" id="gridImage" class="pull-left"/>
+                    <img src="img/robot.gif" id="robotImage" style="position:relative;" class="pull-right"/>
+                </div>
+
+                <div class="span4">
+                    <form>
+                        
+                            <h5>Animation Type</h5>
+                            <label class="radio">
+                              <input type="radio" name="optionsRadios" id="automatic" value="automatic" checked>
+                              Automatic
+                            </label>
+                            <label class="radio">
+                              <input type="radio" name="optionsRadios" id="manual" value="manual">
+                              Manual
+                            </label>
+                        
+                            <h5>Animation Speed (in milliseconds)</h5>
+                            <select type="number" id="animation-speed">
+                              <option >5000</option>
+                              <option>3000</option>
+                              <option>1000</option>
+                            </select>
+                   
+                            <hr />
+                        
+                    </form>
+
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                        <h5>Error Probability Given Discrepency</h5>
+                        </thead>
+                        <thead>
+                        <tr>
+                            <th>d</th>
+                            <th>P(e|X) = e`(1 - e) `-</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td><a href="#" id="d0" data-type="text" data-pk="" data-url="" data-title="Enter data">0.6561</a></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="#" id="d1" data-type="text" data-pk="" data-url="" data-title="Enter data">0.0729</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="#" id="d2" data-type="text" data-pk="" data-url="" data-title="Enter data">0.0081</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="#" id="d3" data-type="text" data-pk="" data-url="" data-title="Enter data">0.0009</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="#" id="d4" data-type="text" data-pk="" data-url="" data-title="Enter data">0.0001</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+
+                    <table id="addSelection" class="table table-striped table-bordered">
+                        <thead>
+                        <h5>Enter Sensory Input Sequence</h5>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="#" class="glc-select" id="dir0" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir1" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir2" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir3" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" id="dir4" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir5" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir6" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir7" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" id="dir8" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir9" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir10" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir11" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" id="dir12" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir13" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir14" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                            <td><a href="#" id="dir15" data-type="text" data-pk="" data-url="" data-title="Enter data"></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                <div class="glc-table-wrap">
+                    <table  id="input-sequence-table" class="table table-condensed table-bordered ">
+                        <thead>
+                        <h5>Selected Sensory Input Sequence</h5>
+                        </thead>
+                        <tbody id="sensory-input-list" class="glc-table-wrap">
+
+                            <!-- SensoryInputSequenceTemplate -->
+                            <script id="sensoryInputListTemplate" type="text/template">
+
+                                <td class="span1"></td>
+                                <td class="span3"><span class="glc-cardinals"><%= cardinals %></span>
+                                    <button type="button" class="btn pull-right glc-delete-row"><i class="icon-remove"></i></button>
+                                    <button type="button" class="btn pull-right glc-edit-row"><i class="icon-edit"></i></button>
+
+                                </td>
+
+                            </script> 
+                            <!-- End of SensoryInputSequenceTemplate -->
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr />
+
+                <p>
+                    <a id="start-btn" class="btn btn-large btn-primary" href="#rfyView">Begin Animation</a>
+                    <button id="refresh-btn" class="btn btn-large pull-right" type="button">Reset</button>
+                </p>
+
+            </div>
+        </div>
+
+
+        </div><!-- /.proper-content -->
+
+        <div class="push"></div>
+
+        </div><!-- /.wrapper -->
+
+            <div class="navbar navbar-inverse navbar-fixed-bottom">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="brand" href="#">Global Localization Calculator</a>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+
+
+
+<script src="js/vendor/jquery/jquery-2.0.3.min.js"></script>
+<script src="js/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="js/vendor/bootstrap/bootstrap-editable.js"></script>
+<script src="js/vendor/underscore/underscore.js"></script>
+<script src="js/vendor/backbone/backbone.js"></script>
+<script src="js/vendor/sylvester/sylvester.js"></script>
+<script src="js/vendor/playsound/jquery.playSound.js"></script>
+
+
+<script src="js/templateLoader.js"></script>
+<script src="js/main.js"></script>
+<script src="js/views/rfy_view.js"></script>
+<script src="js/views/oyz_view.js"></script>
+<script src="js/views/results_view.js"></script>
+<script src="js/routes.js"></script>
+
+
+
+<script>
+
+    $(function(){
+        $('#status').editable({
+            value: 2,
+            source: [
+                {value: 1, text: 'Active'},
+                {value: 2, text: 'Blocked'},
+                {value: 3, text: 'Deleted'}
+            ]
+        });
+    });
+
+    $('#refresh-btn').click(function() {
+    location.reload();
+    });
+
+    $('#start-btn').click(function() {
+        
+       glp.runAnimation();
+        
+    });
+
+    $( document ).ready(function() {
+        $("#robotImage").animate({right:'525px'}, 1600);
+
+        $.playSound('audio/make-your-selection.mp3');
+    });
+
+</script>
+</body>
+</html>

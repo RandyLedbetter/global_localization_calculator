@@ -1,0 +1,103 @@
+<!-- BEGIN: Underscore Template Definition. -->
+<div class="span12">
+
+        <div class="row">
+
+            <h2 class="text-info">Results</h2>
+
+        </div>
+       
+        <hr />
+
+    </div>    
+
+<div class="row">   
+<div class="span8">
+
+    <img src="img/AI-Grid-Black.png" id="gridImage" class="pull-left"/>
+    <img src="img/robot.gif" id="robotImage" style="position:relative;" class="pull-right"/>
+    
+</div>
+
+<div class="span4">
+
+    <div class="pull-right">
+        <div class="matrix-header"><h2>F</h2></div>
+        
+
+        <% var max = glp.getFMaximum(); %>
+        <% var min = glp.getFMinimum(); %>
+        
+        <% for (var i = 0; i < glp.get('n'); i++) { %>
+            <div class="row-title"><h6><%= i + 1 %></h6></div>
+
+            <% if(glp.get('count') != 0) { %>
+
+
+                <%if(glp.get('F').e(i + 1, 1).toFixed(9) == max) { %>
+                    <div class="square-2 text-info maximum square-4"><strong><%= glp.get('F').e(i + 1, 1).toFixed(9) %></strong></div>
+                <% } %>
+                <% if (glp.get('F').e(i + 1, 1).toFixed(9) == min) { %>
+                    <div class="square-2 text-info minimum square-4"><strong><%= glp.get('F').e(i + 1, 1).toFixed(9) %></strong></div>
+               <% } %>
+
+
+            <% } %>
+
+            
+
+            <% if (glp.get('F').e(i + 1, 1).toFixed(9) != max && glp.get('F').e(i + 1, 1).toFixed(9) != min 
+                    || glp.get('count') == 0) { %>
+                <div class="square-2 text-info square-4"><strong><%= glp.get('F').e(i + 1, 1).toFixed(9) %></strong></div>
+            <%} %>
+
+            <div class="line-break"></div>
+
+        <% } %>
+
+    </div>
+</div>
+</div>
+
+<div class="span12">
+
+        <div class="row">
+
+            <div class="span8">
+
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight1" class="pull-left hidden glp-highlight" />
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight2" class="pull-left hidden glp-highlight" />
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight3" class="pull-left hidden glp-highlight" />
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight4" class="pull-left hidden glp-highlight" />
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight5" class="pull-left hidden glp-highlight" />
+
+            <div class="line-break"></div>
+
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight6" class="pull-left hidden glp-highlight" />
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight7" class="pull-left hidden glp-highlight" />
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight8" class="pull-left hidden glp-highlight" />
+
+            <div class="line-break"></div>
+
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight9" class="pull-left hidden glp-highlight" />
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight10" class="pull-left hidden glp-highlight" />
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight11" class="pull-left hidden glp-highlight" />
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight12" class="pull-left hidden glp-highlight" />
+                <img src="img/AI-Grid-Highlight-Blue.png" id="highlight13" class="pull-left hidden glp-highlight" />
+   
+            </div>
+
+            <div class="span4">
+                <hr />
+                <p>
+                    <a id="refresh-btn" class="btn btn-large btn-primary pull-right" style="margin-right: 20px;" href="">Reset</a>
+                </p>
+            </div>
+        </div>    
+</div>
+    
+<!-- END: Underscore Template Definition. -->
+
+
+
+

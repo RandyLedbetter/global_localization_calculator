@@ -1,0 +1,158 @@
+<!-- BEGIN: Underscore Template Definition. -->
+    <div class="span12">
+        <div class="row">
+            <div class="span2">
+                <h1 class="text-info">t = <%= glp.get('count') %></h1>
+            </div>
+            <div class="span10">
+                <blockquote>
+                    <h3>Sensory Input = <%= sensoryInputCollection.at(glp.get('count')).get('cardinals') %>
+                    </h3>
+                </blockquote>
+             
+            </div>
+        </div>
+       
+        <hr />
+    </div>
+
+
+    <div class="pull-left">
+    <div class="matrix-header"><h2>R</h2></div>
+    <div class="title-intersection"></div>
+
+    <% for (var i = 1; i <= glp.get('n'); i++) { %>
+
+        <div class="column-title"><h6><%= i %></h6></div>
+    <%}%>
+    
+    
+    
+
+    <% for (var r = 0; r < glp.get('gridMap').length; r++) { %>
+        <div class="line-break"></div>
+        <div class="row-title"><%= r + 1 %></div>
+
+       <% for (var c = 0; c < glp.get('gridMap').length; c++) {
+            var prob = undefined;
+
+             if (glp.get('gridMap').at(c).get('adjPaths').indexOf(r + 1) != -1) {
+
+                prob = 1 / glp.get('gridMap').at(c).get('adjPaths').length; %>
+
+                <div class="square text-info"><strong><%= prob.toFixed(4) %></strong></div>
+             <% continue; 
+            } %>
+
+            <div class="square"></div>
+        
+        <% } %>
+        
+
+        <% } %>
+
+    </div>
+
+    <div class="pull-left">
+        <div class="square-space-title"></div>
+
+        <% for (var i = 0; i < glp.get('n'); i++) { 
+
+            if ( i + 1 == Math.round(glp.get('n') / 2)) { %>
+                <div class="line-break"></div>
+                <div class="square-space"><h2>X</h2></div>
+            <% } %>
+            
+            <div class="line-break"></div>
+            <div class="square-space"></div>
+
+        <% } %>
+
+    </div>
+
+    <div class="pull-left">
+        <div class="matrix-header"><h2>F</h2></div>
+        <div class="title-intersection"></div>
+        <div class="column-title-2"></div>
+        <div class="line-break"></div>
+
+        <% var max = glp.getFMaximum(); %>
+        <% var min = glp.getFMinimum(); %>
+        
+        <% for (var i = 0; i < glp.get('n'); i++) { %>
+            <div class="row-title"><h6><%= i + 1 %></h6></div>
+
+            <% if(glp.get('count') != 0) { %>
+
+
+                <%if(glp.get('F').e(i + 1, 1).toFixed(9) == max) { %>
+                    <div class="square-2 text-info maximum"><strong><%= glp.get('F').e(i + 1, 1).toFixed(9) %></strong></div>
+                <% } %>
+                <% if (glp.get('F').e(i + 1, 1).toFixed(9) == min) { %>
+                    <div class="square-2 text-info minimum"><strong><%= glp.get('F').e(i + 1, 1).toFixed(9) %></strong></div>
+               <% } %>
+
+
+            <% } %>
+
+            
+
+            <% if (glp.get('F').e(i + 1, 1).toFixed(9) != max && glp.get('F').e(i + 1, 1).toFixed(9) != min 
+                    || glp.get('count') == 0) { %>
+                <div class="square-2 text-info"><strong><%= glp.get('F').e(i + 1, 1).toFixed(9) %></strong></div>
+            <%} %>
+
+            <div class="line-break"></div>
+
+        <% } %>
+
+    </div>
+
+    <div class="pull-left">
+        <div class="square-space-title"></div>
+
+        <% for (var i = 0; i < glp.get('n'); i++) { 
+
+            if ( i + 1 == Math.round(glp.get('n') / 2)) { %>
+                <div class="line-break"></div>
+                <div class="square-space"><h2>=</h2></div>
+            <% } %>
+            
+            <div class="line-break"></div>
+            <div class="square-space"></div>
+
+        <% } %>
+
+    </div>
+
+    <div class="pull-right">
+        <div class="matrix-header"><h2>Y</h2></div>
+        <div class="title-intersection"></div>
+        <div class="column-title-2"></div>
+        <div class="line-break"></div>
+        <% for (var i = 0; i < glp.get('n'); i++) { %>
+            <div class="row-title"><h6><%= i + 1 %></h6></div>
+            <div class="square-2 text-info"><strong><%= glp.get('Y').e(i + 1, 1).toFixed(9) %></strong></div>
+            <div class="line-break"></div>
+
+        <% } %>
+
+    </div>
+
+    <div class="span12">
+
+        <hr />
+
+        <p>
+            <button id="continue-btn" class="btn btn-large  btn-primary pull-right" type="button">Continue</button>
+        </p>
+        
+    </div>
+
+    
+
+<!-- END: Underscore Template Definition. -->
+
+
+
+
