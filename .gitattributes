@@ -1,0 +1,2 @@
+templates/* linguist-documentation
+*.html linguist-language=JavaScript
